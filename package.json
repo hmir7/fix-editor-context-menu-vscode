@@ -1,0 +1,93 @@
+{
+    "name": "fix-editor-context-menu-vscode",
+    "displayName": "Fix Editor Context Menu For VS Code",
+    "description": "Adds frequently used commands (Cut, Copy, Paste, Toggle Line Comment, Toggle Block Comment) to the top of the editor context menu",
+    "version": "0.1.2",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "publisher": "hmir7",
+    "author": "hmir7",
+    "icon": "./icon.png",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/hmir7/fix-editor-context-menu-vscode/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hmir7/fix-editor-context-menu-vscode"
+    },
+    "homepage": "https://github.com/hmir7/fix-editor-context-menu-vscode#readme",
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "context menu",
+        "editor context menu",
+        "right click",
+        "cut",
+        "copy",
+        "paste",
+        "comment",
+        "toggle comment",
+        "line comment",
+        "block comment",
+        "clipboard",
+        "productivity",
+        "vscode extension",
+        "code editing"
+    ],
+    "contributes": {
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "editor.action.clipboardCutAction",
+                    "when": "editorTextFocus && !editorReadonly",
+                    "group": "navigation@-999"
+                },
+				{
+                    "command": "editor.action.clipboardCopyAction",
+                    "when": "editorTextFocus",
+                    "group": "navigation@-998"
+                },
+				{
+                    "command": "editor.action.clipboardPasteAction",
+                    "when": "editorTextFocus && !editorReadonly",
+                    "group": "navigation@-997"
+                },
+				{
+                    "command": "editor.action.commentLine",
+                    "when": "editorTextFocus && !editorReadonly",
+                    "group": "navigation@-996"
+                },
+				{
+                    "command": "editor.action.blockComment",
+                    "when": "editorTextFocus && !editorReadonly",
+                    "group": "navigation@-995"
+                }
+            ]
+        },
+        "commands": [
+			{
+                "command": "editor.action.clipboardCutAction",
+                "title": "Cut"
+            },
+			{
+                "command": "editor.action.clipboardCopyAction",
+                "title": "Copy"
+            },
+			{
+                "command": "editor.action.clipboardPasteAction",
+                "title": "Paste"
+            },
+			{
+                "command": "editor.action.commentLine",
+                "title": "Toggle Line Comment"
+            },
+			{
+                "command": "editor.action.blockComment",
+                "title": "Toggle Block Comment"
+            }
+        ]
+    }
+}
