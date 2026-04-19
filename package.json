@@ -37,6 +37,14 @@
         "vscode extension",
         "code editing"
     ],
+    "topics": [
+        "vscode",
+        "vscode-extension",
+        "context-menu",
+        "editor",
+        "productivity",
+        "clipboard"
+    ],
     "contributes": {
         "menus": {
             "editor/context": [
